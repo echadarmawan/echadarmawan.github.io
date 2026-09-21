@@ -209,3 +209,31 @@ function updateDarkModeButton(isDarkMode) {
     darkModeText.textContent = 'Dark Mode';
   }
 }
+
+// =========================
+// MOBILE NAVBAR
+// =========================
+
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', function () {
+  const isOpen = navMenu.classList.toggle('active');
+
+  menuToggle.setAttribute('aria-expanded', isOpen);
+
+  menuToggle.innerHTML = isOpen
+    ? '<i class="fa-solid fa-xmark"></i>'
+    : '<i class="fa-solid fa-bars"></i>';
+});
+
+// Tutup menu setelah link diklik
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function () {
+    navMenu.classList.remove('active');
+
+    menuToggle.setAttribute('aria-expanded', 'false');
+
+    menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  });
+});

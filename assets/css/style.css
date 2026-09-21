@@ -49,21 +49,30 @@ body > header p {
 body > nav {
   background: white;
   padding: 1rem 1.5rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10; /* agar nav tetap di atas saat scroll */
+  z-index: 1000;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 body > nav a {
   color: #1e293b;
   text-decoration: none;
   font-weight: 500;
-  margin: 0 1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   transition: background-color 0.3s, color 0.3s;
@@ -401,6 +410,18 @@ body > footer {
   font-size: 1rem;
 }
 
+/* HAMBURGER */
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #1e293b;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
 /* =========================
    DARK MODE
 ========================= */
@@ -418,6 +439,18 @@ body.dark-mode > nav {
 
 body.dark-mode > nav a {
   color: #e2e8f0;
+}
+
+body.dark-mode .nav-brand {
+  color: #f8fafc;
+}
+
+body.dark-mode .menu-toggle {
+  color: #f8fafc;
+}
+
+body.dark-mode .nav-menu {
+  background: #1e293b;
 }
 
 body.dark-mode > nav a:hover {
@@ -557,15 +590,50 @@ aside,
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
-  main {
-    flex-direction: column;
-    padding: 0 1rem;
-  }
-  aside {
-    position: static;
-    width: 100%;
-  }
   body > nav {
-    gap: 1.2rem;
+    flex-wrap: wrap;
+    padding: 0.8rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding-top: 0.8rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 1rem;
+  }
+
+  .dark-mode-toggle {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.3rem;
+  }
+
+  
+  body.dark-mode .nav-menu {
+    border-top: 1px solid #334155;
   }
 }
