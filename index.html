@@ -1,223 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keshia Davina Putri Darmawan</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        padding-top: 56px;
-      }
-      .portfolio-item {
-        margin-bottom: 30px;
-      }
-      .about-photo {
-        max-width: 100%;
-        height: auto;
-        border-radius: 50%;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">My Portofolio</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keshia's Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Keshia's Portfolio</h1>
+    <p>Welcome to my portfolio (or curriculum vitae)!</p>
+  </header>
+
+  <!-- NAVIGASI -->
+  <nav>
+    <a href="#education">Education & Work Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+
+    <button id="darkModeToggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+      <span>Dark Mode</span>
+    </button>
+  </nav>
+
+  <!-- MAIN: CONTENT DAN SIDEBAR -->
+  <main>
+
+    <!-- MAIN CONTENT -->
+    <div id="content">
+      <article id="education">
+        <h2>Education & Work Experience</h2>
+        <p>Here's a brief overview of my educational background and work experience:</p>
+        <div class="box">
+          <h3>Education</h3>
+          <p>I am currently pursuing a degree in Information Systems at Gunadarma University, where I am gaining a solid foundation in programming, algorithms, and software development.</p>
+          <p>I have also completed several courses and workshops related to web and desktop application development and programming.</p>
+        </div>
+        <div class="box">
+          <h3>Work Experience</h3>
+          <p>I worked as a Laboratory Assistant at LABSI (Information Systems Laboratory) from October 2024 to January 2026, where I taught students various information technology concepts and assisted with laboratory sessions.</p>
+          <ul>
+            <li>Guided students in practical work on algorithms and basic programming using the Lazarus IDE (Object Pascal).</li>
+            <li>Guided students in practical work on statistics using R.</li>
+            <li>Assisted students in practical work on structured programming concepts using C++.</li>
+            <li>Performed basic troubleshooting on lab computers.</li>
+            <li>Assessed student lab reports during lab sessions.</li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </article>
 
-    <!-- Header -->
-    <header class="bg-dark text-white text-center py-5">
-      <div class="container">
-        <h1>Keshia Davina Putri Darmawan</h1>
-        <p class="lead">Mahasiswa Jurusan Sistem Informasi</p>
-      </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/foto.jpg" alt="Your Photo" class="about-photo" />
-          </div>
-          <div class="col-lg-8" style="align-content: center">
-            <h2 class="text-center">About Me</h2>
-            <p class="lead text-center">Perkenalan singkat.</p>
-            <p>
-              Halo, saya mahasiswi Sistem Informasi Semester 5 di Universitas Gunadarma.  Saya memiliki ketertarikan terhadap backend development dan analisis data, dan saya selalu berusaha untuk memberikan hasil yang terbaik dalam setiap proyek yang saya tangani.
-            </p>
-            <p>
-              Saya mengutamakan kualitas dan perhatian terhadap detail, dan memiliki kemampuan untuk bekerja secara mandiri maupun dalam tim. Portofolio ini menampung beberapa projek dan sertifikat saya.
-            </p>
-            <p>
-              Terima kasih sudah meluangkan waktu untuk melihat portofolio saya. Jangan ragu untuk menghubungi saya jika Anda tertarik untuk bekerja sama atau membutuhkan informasi lebih lanjut.
-            </p>
-          </div>
+      <article id="skills">
+        <h2>Skills</h2>
+        <p>Here are some of the skills I've developed:</p>
+        <div class="box">
+          <h3>Technical Skills</h3>
+          <p>I have a strong foundation in programming languages such as Java, Python, R, Pascal, and C++. I am also proficient in web development technologies including HTML, CSS, PHP, and JavaScript (Node.js).</p>
+          <ul>
+            <li>Database: MySQL, PostgreSQL, Oracle, SQLite</li>
+            <li>Tools: Visual Studio Code, Git</li>
+            <li>Operation System: Windows, Linux (Ubuntu)</li>
+          </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-5">
-      <div class="container">
-        <h2 class="text-center">Projects</h2>
-        <p class="lead text-center">
-          Beberapa projek yang telah saya kerjakan:
-        </p>
-        <div class="row">
-          <div class="col-md-4 portfolio-item">
-            <div class="card h-100">
-              <img
-                class="card-img-top"
-                src="assets/Project1.png"
-                alt="Project 1"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Perancangan Aplikasi Web</h4>
-                <p class="card-text">
-                  Merupakan tugas mata kuliah Algoritma Pemrograman 2 pada semester 2 (sekitar Maret s/d Juli 2023).
-                </p>
-                <a href="https://github.com/echadarmawan/ap2223-ata-baggin" target="_blank" class="btn btn-link">Lihat Projek</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 portfolio-item">
-            <div class="card h-100">
-              <img
-                class="card-img-top"
-                src="assets/Project2.png"
-                alt="Project 2"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Mini Project</h4>
-                <p class="card-text">
-                  Fundamental Course Software Engineering RevoU 18 Maret 2024.
-                </p>
-                <a href="https://github.com/revou-fundamental-course/18-mar-24-echadarmawan" target="_blank" class="btn btn-link">Lihat Projek</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 portfolio-item">
-            <div class="card h-100">
-              <img
-                class="card-img-top"
-                src="assets/Project3.png"
-                alt="Project 3"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Portofolio</h4>
-                <p class="card-text">Portofolio saya untuk saat ini.</p>
-                <a href="https://github.com/echadarmawan/echadarmawan.github.io" target="_blank" class="btn btn-link">Lihat Projek</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 portfolio-item">
-            <div class="card h-100">
-              <img
-                class="card-img-top"
-                src="assets/Project4.png"
-                alt="Project 4"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Projek Mata Kuliah OOP</h4>
-                <p class="card-text">Membuat CRUD yang terhubung ke database menggunakan Java.</p>
-                <a href="https://github.com/echadarmawan/pbo2324-projecttokobuku" target="_blank" class="btn btn-link">Lihat Projek</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 portfolio-item">
-            <div class="card h-100">
-              <img
-                class="card-img-top"
-                src="assets/Project5.png"
-                alt="Project 5"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Project Golang Dibimbing</h4>
-                <p class="card-text">Membuat CRUD Buku yang terhubung dengan database.</p>
-                <a href="https://github.com/echadarmawan/crudbukugolang" target="_blank" class="btn btn-link">Lihat Projek</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 portfolio-item">
-            <div class="card h-100">
-              <img
-                class="card-img-top"
-                src="assets/Project99.png"
-                alt="Project 6"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Project Title</h4>
-                <p class="card-text">Short description of the project.</p>
-                <a href="https://www.example.com" class="btn btn-link">Lihat Projek</a>
-              </div>
-            </div>
-          </div>
-          <!-- Add more projects as needed -->
+        <div class="box">
+          <h3>Soft Skills</h3>
+          <p>I possess strong communication and teamwork skills, which enable me to collaborate effectively with diverse groups of people. I am also a quick learner and adaptable to new environments and technologies.</p>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-light py-5">
-      <div class="container">
-        <h2 class="text-center">Contact</h2>
-        <p class="lead text-center">Jika ingin bertanya atau ngobrol, bisa hubungi saya:</p>
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h3>Email</h3>
-            <p>keshiadavinapd@gmail.com</p>
-            <h3>Github</h3>
-            <p><a href="https://github.com/echadarmawan">echadarmawan</a></p>
-            <h3>Linkedin</h3>
-            <p><a href="https://www.linkedin.com/in/keshiadavinapd/">keshiadavinapd</a></p>
-          </div>
+      <article id="projects">
+        <h2>Projects</h2>
+        <div class="box">
+          <h3>Portfolio Website</h3>
+          <p>This is the website you are currently viewing! It showcases my skills, experience, and projects.</p>
         </div>
-      </div>
-    </section>
+        <div class="box">
+          <h3>Online Bag Sales Web Application "Baggin" (2023)</h3>
+          <p>Created for an assignment in the Algorithms and Programming 2 course using PHP and MySQL.</p>
+        </div>
+        <div class="box">
+          <h3>3 Encryption Programs Using Basic Cryptography Techniques (2024)</h3>
+          <p>Created for an assignment in the Information Technology Security Systems course using Java.</p>
+        </div>
+        <div class="box">
+          <h3>Desktop-Based Inventory Application for Keshia Store (2025)</h3>
+          <p>Created for a 6th semester scientific paper using Java and MySQL.</p>
+        </div>
+      </article>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">
-          © 2024 Keshia Davina Putri Darmawan. All Rights Reserved.
+      <article id="certificates">
+        <h2>Certificates</h2>
+        <div class="box">
+          <h3>Gunadarma University</h3>
+          <p>I have received several certificates from Gunadarma University for completing various courses and workshops related to programming and information technology.</p>
+          <!-- LIST PDF -->
+          <ul class="pdf-list"></ul>
+        </div>
+        <div class="box">
+          <h3>Dicoding</h3>
+          <p>I have completed several courses on Dicoding, which have helped me enhance my skills in various programming languages and technologies.</p>
+          <ul class="pdf-list"></ul>
+        </div>
+        <div class="box">
+          <h3>Microdential KOMINFO "Fundamentals of Cloud Computing and Networking Administration"</h3>
+          <p>I have completed this training program, which has equipped me with basic knowledge of core concepts in cloud computing, including types of cloud services, cloud infrastructure, and security and privacy in cloud environments.</p>
+          <ul class="pdf-list"></ul>
+        </div>
+        <!-- MODAL -->
+        <dialog id="pdfModal" class="pdf-modal">
+          <div class="modal-header">
+            <h3 id="modalTitle">PDF Viewer</h3>
+            <button id="btnClose">✕</button>
+          </div>
+
+          <div class="pdf-container">
+            <div id="loader" class="loading-overlay">
+              <div class="spinner"></div>
+              <p>Loading PDF...</p>
+            </div>
+            <iframe id="pdfFrame" referrerpolicy="no-referrer" loading="lazy"></iframe>
+          </div>
+        </dialog>
+      </article>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside>
+      <img src="assets/img/IMG20181201174519.jpg" class="aside-image" alt="Keshia's Photo" loading="lazy">
+      <h3>Keshia Davina Putri Darmawan</h3>
+      <span class="aside-role">Programmer</span>
+      <p>Passionate about coding and always eager to learn new technologies. I enjoy working on projects that challenge me and allow me to grow as a developer.</p>
+      <div class="aside-contact">
+        <p>
+          📍Tangerang · 
+          <a href="https://www.linkedin.com/in/keshiadavinapd/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+           · 
+          <a href="https://github.com/echadarmawan" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
         </p>
       </div>
-    </footer>
+    </aside>
+  </main>
 
-    <!-- Bootstrap JavaScript and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2024 Keshia's Portfolio. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
 </html>

@@ -1,0 +1,571 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend', 'Arial', sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column; /* agar header, main-wrapper, dan footer sejajar secara vertikal */
+  min-height: 100vh; /* agar footer selalu di bawah, bahkan jika konten sedikit */
+}
+
+/* FLEX LAYOUT UTAMA */
+body > header,
+body > nav,
+main,
+body > footer {
+  width: 100%;
+}
+
+/* HEADER */
+body > header {
+  background: indigo;
+  color: white;
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  border-bottom: hotpink 4px solid;
+}
+
+body > header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+body > header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  font-weight: 300;
+  color: #e0e0e0;
+}
+
+/* NAV */
+body > nav {
+  background: white;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10; /* agar nav tetap di atas saat scroll */
+}
+
+body > nav a {
+  color: #1e293b;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body > nav a:hover {
+  background-color: indigo;
+  color: white;
+}
+
+/* main dibuat wrapper agar content + aside sejajar menggunakan flex */
+main {
+  display: flex;
+  flex: 1; /* agar main mengambil sisa ruang yang tersedia */
+  max-width: 1200px;
+  margin: 2rem auto; /* center secara horizontal dengan margin auto */
+  padding: 0 1.5rem;
+  gap: 2rem; /* jarak antara content dan aside */
+}
+
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+#content {
+  flex: 3; /* lebih lebar */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+aside {
+  flex: 1; /* lebih kecil, di samping */
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.8rem 2.8rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  position: sticky; /* agar aside tetap terlihat saat scroll */
+  top: 1.5rem; /* jarak dari atas saat sticky */
+  align-self: flex-start; /* agar aside tidak ikut stretch */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ARTICLE */
+article {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+  transition: transform 0.2s; /* animasi halus saat hover */
+}
+
+article:hover {
+  transform: translateY(-3px); /* mengangkat article saat dihover */
+}
+
+article h2 {
+  font-size: 1.8rem;
+  border-left: 5px solid hotpink;
+  padding-left: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+article p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+article ul {
+  list-style: disc inside;
+  margin-left: 1.5rem;
+  color: #475569;
+  list-style-position: outside;
+}
+
+article ul li {
+  margin-bottom: 0.5rem;
+}
+
+.box {
+  background: #f0f9ff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.box h3 {
+  font-size: 1.4rem;
+  color: #334155;
+  margin-bottom: 0.3rem;
+}
+
+.box p {
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+/* PDF LIST */
+.pdf-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.pdf-item {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.pdf-link {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.pdf-link:hover {
+  background: royalblue;
+  color: white;
+}
+
+/* DIALOG PDF */
+.pdf-modal {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.pdf-modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.pdf-container {
+  position: relative;
+  height: 75vh;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Tombol close */
+#btnClose {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+#btnClose:hover {
+  color: red;
+}
+
+/* LOADER PDF */
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #eee;
+  border-top: 4px solid red;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ASIDE */
+aside .aside-image {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 1.3rem;
+  border: 3px solid hotpink;
+  box-shadow: 0 8px 18px pink;
+  aspect-ratio: 1/1; /* mempertahankan rasio gambar */
+  object-fit: cover; /* memastikan gambar tidak terdistorsi */
+  background: pink; /* placeholder warna saat gambar belum load */
+}
+
+ aside h3 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+aside .aside-role {
+  color: royalblue;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  background: #f0f9ff;
+  padding: 0.25rem 1rem;
+  border-radius: 2rem;
+  display: inline-block;
+}
+
+aside p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin: 0.8rem 0;
+}
+
+.aside-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.aside-contact a {
+  color: #1e293b;
+  text-decoration: none;
+  font-weight: 500;
+  background: #f0f9ff;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 0 2px;
+}
+
+.aside-contact a:hover {
+  background-color: royalblue;
+  color: #ffffff;
+}
+
+.social-media {
+  width: 14px;
+  height: 14px;
+  vertical-align: -8%;
+}
+
+/* FOOTER */
+body > footer {
+  background: indigo;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 1.8rem;
+  font-size: 0.95rem;
+  border-top: 2px solid hotpink;
+}
+
+/* =========================
+   DARK MODE TOGGLE
+========================= */
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  background: #f0f9ff;
+  color: #1e293b;
+  padding: 0.55rem 1rem;
+  border-radius: 2rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.dark-mode-toggle:hover {
+  background: indigo;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.dark-mode-toggle i {
+  font-size: 1rem;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* NAV */
+body.dark-mode > nav {
+  background: #1e293b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode > nav a {
+  color: #e2e8f0;
+}
+
+body.dark-mode > nav a:hover {
+  background-color: indigo;
+  color: white;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background: #334155;
+  color: #f8fafc;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background: #6366f1;
+  color: white;
+}
+
+/* ARTICLE */
+body.dark-mode article {
+  background: #1e293b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode article p,
+body.dark-mode article ul {
+  color: #cbd5e1;
+}
+
+body.dark-mode article h2 {
+  color: #f8fafc;
+}
+
+/* BOX */
+body.dark-mode .box {
+  background: #273449;
+}
+
+body.dark-mode .box h3 {
+  color: #f1f5f9;
+}
+
+body.dark-mode .box p {
+  color: #cbd5e1;
+}
+
+/* PDF ITEM */
+body.dark-mode .pdf-item {
+  background: #334155;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .pdf-link {
+  color: #e2e8f0;
+}
+
+body.dark-mode .pdf-link:hover {
+  background: royalblue;
+  color: white;
+}
+
+/* ASIDE */
+body.dark-mode aside {
+  background: #1e293b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode aside h3 {
+  color: #f8fafc;
+}
+
+body.dark-mode aside p {
+  color: #cbd5e1;
+}
+
+body.dark-mode aside .aside-role {
+  background: #273449;
+  color: #60a5fa;
+}
+
+body.dark-mode .aside-contact a {
+  color: #e2e8f0;
+  background: #273449;
+}
+
+body.dark-mode .aside-contact a:hover {
+  background: royalblue;
+  color: white;
+}
+
+/* MODAL */
+body.dark-mode .pdf-modal {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+body.dark-mode .modal-header {
+  border-bottom-color: #475569;
+}
+
+body.dark-mode #btnClose {
+  color: #e2e8f0;
+}
+
+body.dark-mode #btnClose:hover {
+  color: #f87171;
+}
+
+/* PDF LOADER */
+body.dark-mode .loading-overlay {
+  background: rgba(15, 23, 42, 0.97);
+  color: #e2e8f0;
+}
+
+body.dark-mode .spinner {
+  border-color: #475569;
+  border-top-color: #f43f5e;
+}
+
+/* TRANSITION */
+body,
+nav,
+article,
+aside,
+.box,
+.pdf-item,
+.pdf-link,
+.dark-mode-toggle,
+.aside-contact a,
+.pdf-modal,
+.modal-header {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  aside {
+    position: static;
+    width: 100%;
+  }
+  body > nav {
+    gap: 1.2rem;
+  }
+}
