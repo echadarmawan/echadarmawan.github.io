@@ -38,6 +38,10 @@ const pdfData = [
       {
         title: "Certificate of Completion for the training of Java Programming for Intermediate (2025)",
         url: "https://drive.google.com/file/d/1U1Kxh6D335SIHdDlHX2Lq2NjnxdFXsBF/preview"
+      },
+      {
+        title: "Certificate of Completion for the training of Application Implementation and Development (2026)",
+        url: "https://drive.google.com/file/d/1Of_cukwBcx-rXRbFAE25sz5HfJ7__ENB/preview"
       }
     ]
   },
